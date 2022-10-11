@@ -20,7 +20,7 @@ export default function Login(){
     <form className={styles.login_form} onSubmit={handleSubmit}>
       <fieldset>
 
-        <legend>이미지넣기</legend>
+        <legend>로그인 시 보여줄 이미지넣기</legend>
 
         <label htmlFor="myEmail">Email </label> {/*레이블과 인풋 연결*/}
         <input type="email" id="myEmail" required value={email} onChange={handleData}/>

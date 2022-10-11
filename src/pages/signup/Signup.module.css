@@ -1,0 +1,47 @@
+.signup_form{
+  max-width: 360px;
+  margin: 100px auto;
+  padding: 20px;
+  
+  border: 1px solid #dbdbdb;
+  background-color: white;
+}
+.signup_form fieldset{
+  border: 0px;
+  padding: 20px;
+}
+.signup_form legend{
+  border: 1px solid red;
+  margin-bottom: 50px;/*나중에 이미지 넣은 후 재조절*/
+}
+
+.signup_form label{ /*이메일 비밀번호 */
+  display: block;
+  margin: 10px 0;
+}
+.signup_form input{
+  display: block;
+  width: 100%;
+
+  box-sizing: border-box; /*인풋 자체의 패딩값이 인풋의 넓이 값처럼 취급되어서 박스사이징 처리*/
+  padding: 8px 6px;
+
+  color: #777;
+  border: 1px solid #dcdcdc;
+  border-radius: 3px;
+  background-color: #fafafa;
+}
+
+.signup_form button{
+  margin-top: 60px;
+  padding: 8px;
+  width: 100%;
+
+  border: 0px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  background-color: #fdd6c0;
+
+  cursor: pointer;
+}

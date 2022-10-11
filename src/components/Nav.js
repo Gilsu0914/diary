@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 export default function Nav(){
   return(
     <nav className={styles.nav}>
-      <h1 className={styles.tit}>Daily Note 나만의 일기</h1>
+      <h1 className={styles.tit}>Daily Note</h1>
       <ul className={styles.list_nav}>
         <li><Link to="/login">로그인</Link></li>
         <li><Link to="/signup">회원가입</Link></li>
