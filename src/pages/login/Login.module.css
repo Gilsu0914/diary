@@ -1,6 +1,6 @@
 .login_form{
   max-width: 360px;
-  margin: 100px auto;
+  margin: 6vh auto;
   padding: 20px;
   
   border: 1px solid #dbdbdb;
@@ -11,8 +11,11 @@
   padding: 20px;
 }
 .login_form legend{
-  border: 1px solid red;
-  margin-bottom: 50px;/*나중에 이미지 넣은 후 재조절*/
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login_form legend img{
+  width: 18vh;
 }
 
 .login_form label{ /*이메일 비밀번호 */
@@ -32,7 +35,21 @@
   background-color: #fafafa;
 }
 
-.login_form button{
+.login_form .btn{
+  margin-top: 60px;
+  padding: 8px;
+  width: 100%;
+
+  border: 0px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  background-color: #f19865;
+
+  cursor: pointer;
+}
+
+.login_form .isPendingBtn{
   margin-top: 60px;
   padding: 8px;
   width: 100%;

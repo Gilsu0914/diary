@@ -25,7 +25,7 @@ export default function Signup(){
     <form className={styles.signup_form} onSubmit={handleSubmit}>
       <fieldset>
 
-        <legend>회원가입 시 보일 이미지</legend>
+        <legend><img src={process.env.PUBLIC_URL + '/logo.png'}/></legend>
 
         <label htmlFor="myEmail">Email </label> {/*레이블과 인풋 연결*/}
         <input type="email" id="myEmail" required value={email} onChange={handleData}/>

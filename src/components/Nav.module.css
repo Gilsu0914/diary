@@ -1,18 +1,38 @@
-.nav{
-  background-color: rgb(225, 191, 133);
-  padding: 20px 50px;
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+nav{
+  background: linear-gradient(#e1e1e1,#fafafa);
+  padding: 20px;
 }
-.nav .list_nav{
+nav .list_nav{
   list-style: none;
   
   display: flex;
   justify-content: right;
+  align-items: center;
   gap: 16px;
 }
-.nav .tit{
-  color: white;
+nav .tit{
+  font-family: 'Satisfy', cursive;
+  color: #000000;
 }
-.nav a{
- color: white;
+
+nav ul {
+  padding-bottom: 15px;
+  border-bottom: 1px solid #E2E1DF;
+}
+
+nav a{
+ margin-right: 20px;
+
+ color: #ababab;
  text-decoration: none;
+}
+
+nav button{
+  border: 0px;
+  color: #ababab;
+  background-color: transparent;
+
+  cursor: pointer;
 }

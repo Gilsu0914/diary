@@ -6,6 +6,8 @@ const authReducer = (state, action)=>{
   switch(action.type){
     case `login`: //로그인과 회원가입은 같은 케이스임. firebase는 회원가입을 하면 그 유저를 로그인 돼있다고 판단하니까.
       return { ...state, user: action.payload } //병합시키면서 겹치는 부분 새 payload를 통해 가져온 거로 덮어씌우기 위해
+    case `logout`:
+      return { ...state, user: null }
     default:
       return state
   }
@@ -15,7 +17,7 @@ const AuthContextProvider = ({children})=>{ //인자값은 children이라 명명
   
   const [state, dispatch] = useReducer(authReducer, { user: null })
 
-  console.log(`user state: `, state)
+  console.log(`user state는 : `, state)
 
   return( //그냥 다 덮자~~
     <AuthContext.Provider value={{ ...state, dispatch }}>

@@ -1,0 +1,18 @@
+footer ul{
+  list-style: none;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ababab;
+}
+footer ul li{
+  margin: 0 2vh;
+  font-size: 0.9rem;
+}
+footer p{
+  text-align: center;
+  color: #ababab;
+  font-size: 0.8rem;
+}
