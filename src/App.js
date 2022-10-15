@@ -1,6 +1,6 @@
 import styles from './App.module.css'
 
-import { BrowserRouter, Routes, Route, useNavigate, Navigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useAuthContext } from './hooks/useAuthContext'
 
 import Nav from './components/Nav'
@@ -13,8 +13,8 @@ import Signup from './pages/signup/Signup'
 
 function App() {
 
-  const { isAuthReady, user } = useAuthContext()
-  //const navigate = useNavigate();
+  const { isAuthReady, user } = useAuthContext() 
+  //isAuthReady : firebase와 통신이 완료되었다면 true
 
   return (
     <div className={styles.app}>
@@ -31,9 +31,8 @@ function App() {
         </BrowserRouter>
         : "loading..."
       }
-      
     </div>
   );
-}
+} 
 
 export default App;

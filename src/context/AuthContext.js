@@ -11,26 +11,29 @@ const authReducer = (state, action)=>{
     case `logout`:
       return { ...state, user: null }
     case `isAuthReady`:
-      return { ...state, user: action.payload, isAuthReady:true }
+      return { ...state, user: action.payload, isAuthReady:true } //isAuthReady가 true가 되면 렌더링 유발 -> 로그인 전(false)이랑 로그인 후(true) 화면노출 다르게 하려고
     default:
       return state
   }
 }
 
 
+ //인자값은 children이라 명명 사실상 컴포넌트 싹 다
+const AuthContextProvider = ({children})=>{
 
-const AuthContextProvider = ({children})=>{ //인자값은 children이라 명명
 
-
-  useEffect(()=>{ //새로고침을 한 후에도 회원정보 유지할 수 있도록
-    const unsubscribe = onAuthStateChanged(appAuth, (user)=>{
-      dispatch({ type: `isAuthReady`, payload: user })
+  //사용자 인증정보 처리중일 땐 리액트 렌더링 차단, 인증정보 받아오고나면 그 때 렌더링을 구현
+  useEffect(()=>{ 
+    const unsubscribe = onAuthStateChanged(appAuth, (user)=>{ //user정보를 반환해줌. 바뀐 user 정보를 갖다가 콜백함수 실행. 아참! 리액트야 너이제 렌더링해도 돼 허락해줄게~
+      dispatch({ type: `isAuthReady`, payload: user }) //유저정보 가져왔고 렌더링도 될테니 화면다르게 보일 준비자세 취하기 :  onAuthStateChanged로 반환받은 user를 payload로 탑재 & isAuthReady도 true로 변경
     })
-    return unsubscribe
+    return unsubscribe;
   },[])
-
   
-  const [state, dispatch] = useReducer(authReducer, { user: null, isAuthReady: false })
+  const [state, dispatch] = useReducer(authReducer, { 
+    user: null, 
+    isAuthReady: false, //사용자 인증정보가 준비가 되었는지 안 되었는지 판단할 수 있게 하는 것인데 useEffect로 인해 인증판단 뒤엔 무조건 true로 바뀔 예정.
+   })
 
   console.log(`user state는 : `, state)
 

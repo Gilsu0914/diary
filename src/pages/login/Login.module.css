@@ -12,7 +12,6 @@
 }
 .login_form legend{
   text-align: center;
-  margin-bottom: 20px;
 }
 .login_form legend img{
   width: 18vh;
@@ -20,7 +19,8 @@
 
 .login_form label{ /*이메일 비밀번호 */
   display: block;
-  margin: 10px 0;
+  margin: 15px 0;
+  font-weight: 100;
 }
 .login_form input{
   display: block;

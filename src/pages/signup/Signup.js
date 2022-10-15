@@ -33,7 +33,7 @@ export default function Signup(){
         <label htmlFor="myPassWord">Password </label> {/*레이블과 인풋 연결2*/}
         <input type="password" id="myPassWord" required value={password} onChange={handleData}/>
 
-        <label htmlFor="myNickName">User Nickname </label> {/*레이블과 인풋 연결3*/}
+        <label htmlFor="myNickName">Nickname </label> {/*레이블과 인풋 연결3*/}
         <input type="text" id="myNickName" required value={displayName} onChange={handleData}/>
 
         <button type='submit' className={styles.btn}>회원가입</button>
