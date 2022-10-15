@@ -10,7 +10,6 @@ nav .list_nav{
   display: flex;
   justify-content: right;
   align-items: center;
-  gap: 16px;
 }
 nav h1{
   font-family: 'Satisfy', cursive;

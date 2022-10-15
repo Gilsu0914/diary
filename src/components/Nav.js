@@ -20,7 +20,6 @@ export default function Nav(){
         }
         { user && //로그인 한 상태일 때 == 가져온 user값이 존재할 떄
           <>
-          <li>Welcome! {user.displayName}</li> 
           <li><button type="button" onClick={logout}>Log Out</button></li>
           </>
         }

@@ -48,7 +48,6 @@
 
   cursor: pointer;
 }
-
 .login_form .isPendingBtn{
   margin-top: 60px;
   padding: 8px;
@@ -61,4 +60,9 @@
   background-color: #fdd6c0;
 
   cursor: pointer;
+}
+
+.login_form i{
+  font-size: 0.8rem;
+  color: red;
 }

@@ -1,5 +1,6 @@
 import { useFirestore } from '../../hooks/useFirestore'
 import styles from './List.module.css'
+import { FiTrash } from 'react-icons/fi';
 
 export default function List({ documents }){
   
@@ -11,9 +12,9 @@ export default function List({ documents }){
         documents.map((i)=>{
           return(
             <li key={i.id}>
-              <strong className={styles.title}>{ i.title }</strong>
+              <h2 className={styles.title}>{ i.title }</h2>
               <p className={styles.text}>{ i.text }</p>
-              <button onClick={()=>{ deleteDocument(i.id) }} >delete</button>
+              <button onClick={()=>{ deleteDocument(i.id) }} ><FiTrash></FiTrash></button>
             </li>
           )
         })

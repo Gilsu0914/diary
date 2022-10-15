@@ -15,8 +15,6 @@ export default function Login(){
 
   const handleSubmit = (e)=>{
     e.preventDefault();
-    console.log(email, password);
-
     login(email, password);
   } 
 
@@ -34,7 +32,7 @@ export default function Login(){
 
         { !isPending && <button type='submit' className={styles.btn}>로그인</button> }
         { isPending && <button className={styles.isPendingBtn}>로그인 진행중입니다.</button> }
-        { error && <strong>{error}</strong> }
+        { error && <i>이메일 또는 비밀번호를 잘 못 입력하셨습니다.<br/>{error}</i> }
 
       
       </fieldset>

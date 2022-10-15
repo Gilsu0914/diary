@@ -11,7 +11,10 @@ export default function Diary({ uid }){
 
   const handleData = (e)=>{
     if(e.target.id == "title"){ setTitle(e.target.value) }
-    else if(e.target.id == "text"){ setText(e.target.value) }
+    else if(e.target.id == "text"){ 
+      
+      setText(e.target.value) 
+    }
   };
 
   const handleSubmit = (e)=>{
@@ -34,10 +37,10 @@ export default function Diary({ uid }){
         <fieldset>
           <legend>How was your today?</legend>
           <label htmlFor="title">TITLE</label>
-          <input type="text" value={title} required id="title" onChange={handleData}/>
+          <input type="text" value={title} required maxLength={30} placeholder="최대30글자" id="title"  onChange={handleData}/>
 
           <label htmlFor="text">KEEP A DIARY</label>
-          <textarea type="text" value={text} required id="text" onChange={handleData}></textarea>
+          <textarea type="text" value={text} required id="text" wrap="hard" onChange={handleData}></textarea>
 
           <button type="submit">Save</button>
         </fieldset>

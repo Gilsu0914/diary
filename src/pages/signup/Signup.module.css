@@ -35,7 +35,7 @@
   background-color: #fafafa;
 }
 
-.signup_form button{
+.signup_form .btn{
   margin-top: 60px;
   padding: 8px;
   width: 100%;
@@ -47,4 +47,23 @@
   background-color: #f19865;
 
   cursor: pointer;
+}
+
+.signup_form .isPendingBtn{
+  margin-top: 60px;
+  padding: 8px;
+  width: 100%;
+
+  border: 0px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  background-color: #fdd6c0;
+
+  cursor: pointer;
+}
+
+.signup_form i{
+  font-size: 0.8rem;
+  color: red;
 }

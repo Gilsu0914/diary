@@ -36,7 +36,9 @@ export default function Signup(){
         <label htmlFor="myNickName">Nickname </label> {/*레이블과 인풋 연결3*/}
         <input type="text" id="myNickName" required value={displayName} onChange={handleData}/>
 
-        <button type='submit' className={styles.btn}>회원가입</button>
+        { !isPending && <button type='submit' className={styles.btn}>회원가입</button> }
+        { isPending && <button className={styles.isPendingBtn}>진행중</button> }
+        { error && <i>{error}</i> }
       
       </fieldset>
     </form>
