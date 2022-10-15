@@ -30,13 +30,13 @@ export default function Diary({ uid }){
 
   return(
     <>
-      <form action="" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <fieldset>
-          <legend>Note</legend>
-          <label htmlFor="title">Title</label>
+          <legend>How was your today?</legend>
+          <label htmlFor="title">TITLE</label>
           <input type="text" value={title} required id="title" onChange={handleData}/>
 
-          <label htmlFor="text">How was your today?</label>
+          <label htmlFor="text">KEEP A DIARY</label>
           <textarea type="text" value={text} required id="text" onChange={handleData}></textarea>
 
           <button type="submit">Save</button>
