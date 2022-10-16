@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom'
 import { useLogout } from '../hooks/useLogout'
 import { useAuthContext } from '../hooks/useAuthContext';
 
+import { FiLogOut } from "react-icons/fi";
+
+
 export default function Nav(){
 
   const { logout } = useLogout();
@@ -21,7 +24,7 @@ export default function Nav(){
           }
           { user && //로그인 한 상태일 때 == 가져온 user값이 존재할 떄
             <>
-            <li><button type="button" onClick={logout}>나가기</button></li>
+            <li><button type="button" onClick={logout}><FiLogOut></FiLogOut></button></li>
             </>
          }
         </ul>
