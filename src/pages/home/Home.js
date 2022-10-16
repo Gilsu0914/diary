@@ -8,7 +8,6 @@ export default function Home(){
   
   const { user } = useAuthContext();
   const { documents, error } = useCollection('diary', ['uid', '==',  user.uid ]); //컬렉션 인자값 잊지말자~
-  
 
   return(
     <main className={styles.main}>
@@ -17,7 +16,7 @@ export default function Home(){
         { documents && <List documents = { documents } /> }
       </ul>
       <aside className={styles.main_aside}>
-        <Diary uid={user.uid} ></Diary>
+        <Diary uid={user.uid} displayName={user.displayName}></Diary>
       </aside>
     </main>
     

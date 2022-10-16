@@ -27,13 +27,13 @@ export default function Signup(){
 
         <legend><img src={process.env.PUBLIC_URL + '/logo.png'}/></legend>
 
-        <label htmlFor="myEmail">Email </label> {/*레이블과 인풋 연결*/}
+        <label htmlFor="myEmail">이메일 </label> {/*레이블과 인풋 연결*/}
         <input type="email" id="myEmail" required value={email} onChange={handleData}/>
 
-        <label htmlFor="myPassWord">Password </label> {/*레이블과 인풋 연결2*/}
+        <label htmlFor="myPassWord">비밀번호 </label> {/*레이블과 인풋 연결2*/}
         <input type="password" id="myPassWord" required value={password} onChange={handleData}/>
 
-        <label htmlFor="myNickName">Nickname </label> {/*레이블과 인풋 연결3*/}
+        <label htmlFor="myNickName">닉네임 </label> {/*레이블과 인풋 연결3*/}
         <input type="text" id="myNickName" required value={displayName} onChange={handleData}/>
 
         { !isPending && <button type='submit' className={styles.btn}>회원가입</button> }

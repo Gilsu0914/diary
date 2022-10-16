@@ -34,8 +34,7 @@ const AuthContextProvider = ({children})=>{
     user: null, 
     isAuthReady: false, //사용자 인증정보가 준비가 되었는지 안 되었는지 판단할 수 있게 하는 것인데 useEffect로 인해 인증판단 뒤엔 무조건 true로 바뀔 예정.
    })
-
-  console.log(`user state는 : `, state)
+  // console.log(`user state는 : `, state)
 
   return( //그냥 다 덮자~~
     <AuthContext.Provider value={{ ...state, dispatch }}>

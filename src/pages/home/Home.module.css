@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   
-  max-width: 1200px;
-  margin: 0px auto;
+  max-width: 1100px;
+  margin: 6vh auto;
 }
 .main_ul{
   margin: 0px;
@@ -11,6 +11,8 @@
 
   list-style: none;
 }
+
+/* src/pages/List */
 .main_ul li{
   box-sizing: border-box;
   border: 1px solid #dbdbdb;
@@ -25,19 +27,15 @@
 
   position: relative;
 }
-.main_ul p{
-  width: 498px;
-  border: 0px;
-
-  outline: none;
-  resize: none;
+.main_ul li p{
+  line-height: 1.5rem;
 }
 .main_ul li>button{
   background-color: white;
   border: 0px;
 
   font-size: 1.125rem;
-  color: #8e8e8e;
+  color: #fdd6c0;
   cursor: pointer;
 
   position: absolute;
@@ -46,7 +44,7 @@
 }
 
 
-
+/* src/pages/Diary */
 .main_aside{
   background-color: white;
   border: 1px solid #dbdbdb;
@@ -54,7 +52,8 @@
 
   padding: 30px;
   margin-left: 20px;
-  height: 550px;
+  width: 440px;
+  height: 600px;
 }
 .main_aside fieldset{
   border: none;
@@ -67,7 +66,7 @@
 .main form label{
   color: #8e8e8e;
   display: block;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 .main form input{
   width: 100%;
@@ -94,10 +93,17 @@
   resize: none;
   border: 0px;
   background-color: #EFEFEF;
+
+  white-space: pre-line;
+}
+.main form fieldset>i{
+  font-size: 0.8rem;
+  color: #8e8e8e;
 }
 
 .main form button{
   cursor: pointer;
+  font-weight: bold;
 
   margin-top: 30px;
   padding: 8px;

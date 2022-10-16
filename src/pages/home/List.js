@@ -1,6 +1,6 @@
+import styles from './Home.module.css'
 import { useFirestore } from '../../hooks/useFirestore'
-import styles from './List.module.css'
-import { FiTrash } from 'react-icons/fi';
+import { IoTrashBinSharp } from 'react-icons/io5';
 
 export default function List({ documents }){
   
@@ -12,9 +12,10 @@ export default function List({ documents }){
         documents.map((i)=>{
           return(
             <li key={i.id}>
-              <h2 className={styles.title}>{ i.title }</h2>
-              <p className={styles.text}>{ i.text }</p>
-              <button onClick={()=>{ deleteDocument(i.id) }} ><FiTrash></FiTrash></button>
+              <h2 className={styles.titles}>{ i.title }</h2>
+              <p className={styles.texts} >{ i.text }</p>
+              <h5>{i.date}</h5>
+              <button onClick={()=>{ deleteDocument(i.id) }} ><IoTrashBinSharp></IoTrashBinSharp></button>
             </li>
           )
         })

@@ -2,7 +2,11 @@
 
 nav{
   background: linear-gradient(#e1e1e1,#fafafa);
-  padding: 20px 80px;
+  padding-top: 15px;
+}
+nav .innerNav{
+  max-width: 1100px;
+  margin: 0 auto;
 }
 nav .list_nav{
   list-style: none;
@@ -33,7 +37,8 @@ nav a{
 
 nav button{
   border: 0px;
-  color: #ababab;
+  color: #000000;
+  font-weight: ;
   background-color: transparent;
 
   cursor: pointer;
